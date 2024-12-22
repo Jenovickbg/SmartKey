@@ -1,0 +1,199 @@
+import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
+}
+
+
+.content main .header .report{
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 36px;
+    background: var(--primary);
+    color: var(--light);
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    font-weight: 500;
+}
+
+.content main .insights{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-gap: 24px;
+    margin-top: 36px;
+    color: var(--dark);
+}
+.content main .insights li{
+    padding: 24px;
+    background: var(--light);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    cursor: pointer;
+}
+.content main .insights li .bx{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content main .insights li:nth-child(1) .bx{
+    background: var(--light-primary);
+    color: var(--primary);
+}
+.content main .insights li:nth-child(2) .bx{
+    background: var(--light-danger);
+    color: var(--danger);
+}
+.content main .insights li:nth-child(3) .bx{
+    background: var(--light-success);
+    color: var(--success);
+}
+.content main .insights li .info h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.content main .bottom-data{
+   display: flex;
+   flex-wrap: wrap;
+   grid-gap:24px;
+   width: 100%;
+   color: var(--dark);
+}
+.content main .bottom-data>div{
+    border-radius: 20px;
+    background: var(--light);
+    padding: 24px;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+.content main .bottom-data .header{
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+.content main .bottom-data .header h3{
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.content main .bottom-data .header .bx{
+    cursor: pointer;
+}
+.content main .bottom-data .orders{
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+.content main .bottom-data .orders table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content main .bottom-data .orders table th{
+    padding-bottom: 12px;
+    height: 13px;
+    text-align: center;
+    border-bottom: 5px solid var(--grey);
+   
+}
+.content main .bottom-data .orders table td{
+    padding: 16px 0;
+}
+.content main .bottom-data .orders table tr td:first-child{
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+
+.content main .bottom-data .orders table td img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.content main .bottom-data .orders table tbody tr{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.content main .bottom-data .orders table tbody tr:hover{
+   border-bottom: 1px solid var(--grey);
+   background: var(--grey);
+}
+.content main .bottom-data .orders table tbody tr td .status{
+   font-size: 10px;
+   padding: 6px 16px ;
+   color: var(--light);
+   border-radius: 20px;
+   font-weight: 700;
+}
+.content main .bottom-data .orders table tbody tr td .status.completed{
+   background: var(--success);
+ }
+ .content main .bottom-data .orders table tbody tr td .status.process{
+    background: var(--primary);
+  }
+  .content main .bottom-data .orders table tbody tr td .status.pending{
+    background: var(--warning);
+  }
+ 
+  .content main .bottom-data .reminders{
+    flex-grow: 1;
+    flex-basis: 300px;
+  }
+
+  .content main .bottom-data .reminders .task-list{
+    width: 100%;
+  }
+  .content main .bottom-data .reminders .task-list li{
+    width: 100%;
+    margin-bottom: 16px;
+    background: var(--grey);
+    padding: 14px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+  }
+
+  .content main .bottom-data .reminders .task-list li .task-litle{
+    display: flex;
+    align-items: center;
+  }
+
+  .content main .bottom-data .reminders .task-list li .task-litle p{
+    margin-left: 6px;
+  }
+  .content main .bottom-data .reminders .task-list li .bx{
+    cursor: pointer;
+  }
+  .content main .bottom-data .reminders .task-list li.completed{
+    border-left: 10px solid var(--success);
+  }
+
+  .content main .bottom-data .reminders .task-list li.completed .task-litle .bx{
+    color: var(--success);
+  }
+
+  .content main .bottom-data .reminders .task-list li.not-completed {
+    border-left: 10px solid var(--danger);
+  }
+  .content main .bottom-data .reminders .task-list li.not-completed .task-litle .bx{
+    color: var(--danger);
+  }
+  .content main .bottom-data .reminders .task-list li:last-child{
+    margin-bottom: 0;
+  }
